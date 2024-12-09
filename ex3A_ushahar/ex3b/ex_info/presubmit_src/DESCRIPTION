@@ -1,0 +1,28 @@
+##############################################################################################################
+#################################### Directory Description - presubmit_src ###################################
+######################################### No need to edit this file ##########################################
+##############################################################################################################
+
+
+##############################################################################################################
+########################## Cases where students' submission does not include a main ##########################
+##############################################################################################################
+
+This directory must contain a source file called presubmit.c/cpp that contains a main function.
+When compiled with the student's submission and run, it will run the presubmit tests.
+Additional source files for presubmit compilation may be placed in this directory, and their names must
+be specified in the info file.
+
+##############################################################################################################
+############################ Cases where students' submission does include a main ############################
+##############################################################################################################
+
+In such cases a subset of IO tests must be specified for the presubmit in the info file.
+Note: If a header file is required for compilation of these tests, it should be provided in the
+	  persubmit_headers directory.
+
+##############################################################################################################
+################################################## All cases #################################################
+##############################################################################################################
+
+A subset of AST tests to be run in presubmit may be specifies in the info file.

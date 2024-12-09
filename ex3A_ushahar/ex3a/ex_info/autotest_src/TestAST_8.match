@@ -1,0 +1,1 @@
+m functionDecl(hasName('fill_database'), hasDescendant(stmt()))

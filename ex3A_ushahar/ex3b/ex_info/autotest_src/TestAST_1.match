@@ -1,0 +1,1 @@
+m functionDecl(hasName('get_first_random_node'), hasDescendant(stmt()))

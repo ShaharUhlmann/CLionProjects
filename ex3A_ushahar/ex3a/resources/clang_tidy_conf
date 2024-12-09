@@ -1,0 +1,100 @@
+---
+# Configure clang-tidy for this project.
+
+# Here is an explanation for why some of the checks are disabled:
+#
+#  -google-readability-namespace-comments: the *_CLIENT_NS is a macro, and
+#      clang-tidy fails to match it against the initial value.
+#
+#  -modernize-use-trailing-return-type: clang-tidy recommends using
+#      `auto Foo() -> std::string { return ...; }`, we think the code is less
+#      readable in this form.
+#
+#  -modernize-return-braced-init-list: We think removing typenames and using
+#      only braced-init can hurt readability.
+#
+#  -modernize-avoid-c-arrays: We only use C arrays when they seem to be the
+#      right tool for the job, such as `char foo[] = "hello"`. In these cases,
+#      avoiding C arrays often makes the code less readable, and std::array is
+#      not a drop-in replacement because it doesn't deduce the size.
+#
+#  -performance-move-const-arg: This warning requires the developer to
+#      know/care more about the implementation details of types/functions than
+#      should be necessary. For example, `A a; F(std::move(a));` will trigger a
+#      warning IFF `A` is a trivial type (and therefore the move is
+#      meaningless). It would also warn if `F` accepts by `const&`, which is
+#      another detail that the caller need not care about.
+#
+#  -readability-redundant-declaration: A friend declaration inside a class
+#      counts as a declaration, so if we also declare that friend outside the
+#      class in order to document it as part of the public API, that will
+#      trigger a redundant declaration warning from this check.
+#
+Checks: >
+  -*,
+  readability-*,
+  readability-else-after-return,
+  bugprone-assert-side-effect,
+  modernize-use-nullptr,
+  modernize-use-override,
+  readability-misleading-indentation,
+  readability-misplaced-array-index,
+  readability-redundant-access-specifiers,
+  readability-redundant-control-flow,
+  readability-redundant-function-ptr-dereference,
+  readability-redundant-member-init,
+  readability-simplify-boolean-expr,
+  readability-static-accessed-through-instance,
+  readability-string-compare,
+  cppcoreguidelines-avoid-goto,
+  cppcoreguidelines-virtual-class-destructor,
+  cppcoreguidelines-no-malloc,
+  bugprone-unhandled-self-assignment,
+  bugprone-undelegated-constructor,
+  bugprone-suspicious-realloc-usage,
+  bugprone-sizeof-expression,
+  bugprone-exception-escape,
+  llvm-header-guard,
+  -readability-redundant-declaration,
+  -readability-isolate-declaration,
+  -readability-else-after-return,
+  -readability-convert-member-functions-to-static,
+  -readability-use-anyofallof,
+
+#  -readability-braces-around-statements,
+
+
+# Turn all the warnings from the checks above into errors.
+#WarningsAsErrors: "*"
+
+HeaderFilterRegex: "(google/cloud/|generator/).*\\.h$"
+
+CheckOptions:
+  - { key: readability-identifier-naming.NamespaceCase,          value: lower_case }
+  - { key: readability-identifier-naming.ClassCase,              value: CamelCase  }
+  - { key: readability-identifier-naming.StructCase,             value: lower_case  }
+    - { key: readability-identifier-naming.TemplateParameterCase,  value: CamelCase  }
+  - { key: readability-identifier-naming.FunctionCase,           value: lower_case  }
+  - { key: readability-identifier-naming.PrivateMethodCase,      value: lower_case  }
+  - { key: readability-identifier-naming.VariableCase,           value: lower_case }
+  - { key: readability-identifier-naming.ClassMemberCase,        value: lower_case }
+#  - { key: readability-identifier-naming.ClassMemberSuffix,      value: _          }
+#  - { key: readability-identifier-naming.PrivateMemberSuffix,    value: _          }
+#  - { key: readability-identifier-naming.ProtectedMemberSuffix,  value: _          }
+  - { key: readability-identifier-naming.EnumConstantCase,         value: UPPER_CASE }
+  - { key: readability-identifier-naming.EnumCase,               value: CamelCase }
+#  - { key: readability-identifier-naming.EnumConstantPrefix,       value: k         }
+  - { key: readability-identifier-naming.ConstexprVariableCase,    value: lower_case }
+#  - { key: readability-identifier-naming.ConstexprVariablePrefix,  value: k         }
+  - { key: readability-identifier-naming.GlobalConstantCase,       value: lower_case }
+#  - { key: readability-identifier-naming.GlobalConstantPrefix,     value: k         }
+  - { key: readability-identifier-naming.MemberConstantCase,       value: lower_case }
+#  - { key: readability-identifier-naming.MemberConstantPrefix,     value: k         }
+  - { key: readability-identifier-naming.StaticConstantCase,       value: lower_case }
+#  - { key: readability-identifier-naming.StaticConstantPrefix,     value: k         }
+  - { key: readability-identifier-naming.MacroDefinitionCase,      value: UPPER_CASE}
+  - { key: readability-identifier-naming.MacroDefinitionIgnoredRegexp,   value: "[A-Z_]*" }
+  - { key: readability-implicit-bool-conversion.AllowIntegerConditions,  value: 1   }
+  - { key: readability-implicit-bool-conversion.AllowPointerConditions,  value: 1   }
+  - { key: readability-function-size.StatementThreshold,                 value: 1000  }
+  - { key: readability-function-size.LineThreshold,                      value: 50  }

@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/ex3A_ushahar.dir/linked_list.c.o CMakeFiles/ex3A_ushahar.dir/tweets_generator.c.o CMakeFiles/ex3A_ushahar.dir/markov_chain.c.o -o ex3A_ushahar 

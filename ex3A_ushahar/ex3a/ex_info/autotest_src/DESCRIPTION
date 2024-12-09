@@ -1,0 +1,96 @@
+##############################################################################################################
+#################################### Directory Description - autotest_src ####################################
+######################################### No need to edit this file ##########################################
+##############################################################################################################
+
+
+This directory should include all the sources (.c/.cpp files) needed for autotesting, in the following format:
+
+[OPTIONAL] In all cases, additional source files may be provided. They must be specified in the info file and
+			will be added to compilation in all tests.
+
+##############################################################################################################
+########################## Cases where students' submission does not include a main ##########################
+##############################################################################################################
+
+[OPTIONAL] Unit Test: For each unit test there should be a corresponding source file called Test_#.c/cpp
+			(where # is the test number) containing a main function. A non-zero exit code from this test
+			indicates failure.
+
+[OPTIONAL] Comparison Test: For each comparison test there should be a corresponding file called
+			TestComparison_# (where # is the test number). A non-zero exit code from this test indicates
+			failure.
+			For each test case there should be any of the following files:
+				TestComparison_#.in* (where # is the test number and * is anything), an input file that
+							(if found) will be available in the working directory during the test runtime.
+				TestComparison_#.arg (where # is the test number), a file containing one line which (if
+							found) will be passed as a CLI argument to the executable.
+				TestComparison_#.stdin (where # is the test number), an input file which (if found) will be
+							provided to the executable as stdin.
+				TestComparison_#.out (where # is the test number), file containing the expected output for
+							this test.
+				TestComparison_#.stdout (where # is the test number), file containing the expected output for
+				 			this test.
+				TestComparison_#.stderr (where # is the test number), file containing the expected stderr for
+				 			this test.
+				TestComparison_#.code (where # is the test number), file containing the expected exitcode for this
+								test.
+			If the output is written to a file, the info file should specify a path prefix for such files.
+			Additionally, this directory should include any sources for a comparison script to compare the
+			student output with expected output.
+			The info file must specify a command that receives two arguments - student output and expected
+			output, and exits with non-zero on failure.
+
+[OPTIONAL] Bonus Test: For each bonus test there should be a corresponding file called
+			TestBonus_# (where # is the test number). A non-zero exit code from this test indicates
+			failure.
+			These Tests will be run only if bonus files were submitted by the student.
+
+##############################################################################################################
+############################ Cases where students' submission does include a main ############################
+##############################################################################################################
+
+[REQUIRED] I/O Test: Only one compilation is performed. The resulting executable may be tested with multiple
+			i/o cases.
+			For each test case there should be any of the following files:
+				TestIO_#.in (where # is the test number and * is anything), an input file that (if found)
+							will be available in the working directory during the test runtime.
+				TestIO_#.arg (where # is the test number), a file containing one line which (if found) will
+				 			be passed as a CLI argument to the executable.
+				TestIO_#.stdin (where # is the test number), an input file which (if found) will be provided
+							to the executable as stdin.
+				TestIO_#.out (where # is the test number), file containing the expected output for this test.
+				TestIO_#.stdout (where # is the test number), file containing the expected output for this
+							test.
+				TestIO_#.stderr (where # is the test number), file containing the expected stderr for this test.
+				TestIO_#.code (where # is the test number), file containing the expected exitcode for this
+								test.
+
+			If the output is written to a file, the info file should specify a path prefix for such files.
+			Additionally, this directory should include any sources for a comparison script to compare the
+			student output with expected output.
+			The info file must specify the name of a script that receives two arguments - student output and
+			expected output, and exits with non-zero on failure (you may use diff.py).
+
+##############################################################################################################
+################################################## All cases #################################################
+##############################################################################################################
+
+
+[OPTIONAL] Positive Compilation Test: For each positive compilation test there should be a corresponding file
+			called TestPCompilation_# (where # is the test number). Failure to compile this source with the
+			student's submission indicates failure.
+
+[OPTIONAL] Negative Compilation Test: For each negative compilation test there should be a corresponding file
+			called TestNCompilation_# (where # is the test number). Successfully compiling this source with
+			the student's submission indicates failure.
+
+[OPTIONAL] AST Tests: For each AST test there should be a corresponding file called TestAST_#.match (where # is the
+			test number). The file must contain a single LLVM AST Matchers match command.
+			Optionally include a TestAST_#.res file containing the exact number of required matches to pass
+			the test. If a res file is not supplied, any non-zero number of matches will pass the test.
+			Optionally include a TestAST_#.info file containing an explanation of the test failure that will
+			be displayed in presubmit and logged during testing.
+
+[OPTIONAL] In all cases, additional source files may be provided. They must be specified in the info file and
+			will be added to compilation in all tests.

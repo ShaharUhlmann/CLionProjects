@@ -1,0 +1,8 @@
+##############################################################################################################
+################################## Directory Description - presubmit_headers #################################
+######################################### No need to edit this file ##########################################
+##############################################################################################################
+
+This directory should include any headers (.h files) that need to be included for presubmit compilation.
+
+This directory will be added to the search path during presubmit compilation.
