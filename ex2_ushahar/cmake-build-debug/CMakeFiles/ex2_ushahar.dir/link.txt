@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/ex2_ushahar.dir/test_bus_lines.c.o CMakeFiles/ex2_ushahar.dir/sort_bus_lines.c.o CMakeFiles/ex2_ushahar.dir/main.c.o -o ex2_ushahar 

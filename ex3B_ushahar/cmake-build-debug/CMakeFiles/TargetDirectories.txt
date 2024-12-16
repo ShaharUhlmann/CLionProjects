@@ -1,0 +1,3 @@
+/home/ushahar/CLionProjects/ex3B_ushahar/cmake-build-debug/CMakeFiles/ex3B_ushahar.dir
+/home/ushahar/CLionProjects/ex3B_ushahar/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/ushahar/CLionProjects/ex3B_ushahar/cmake-build-debug/CMakeFiles/rebuild_cache.dir
