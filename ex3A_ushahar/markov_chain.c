@@ -218,7 +218,7 @@ MarkovNode* get_next_random_node(MarkovNode* cur_markov_node)
 	for (int i = 0; i < cur_markov_node->frequency_list_size; i++)
 	{
 		random_number -= cur_markov_node->frequency_list[i].frequency;
-		if (random_number <= 0)
+		if (random_number < 0)
 		{
 			return cur_markov_node->frequency_list[i].markov_node;
 		}
