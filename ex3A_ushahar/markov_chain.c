@@ -25,7 +25,7 @@ Node* get_node_from_database(MarkovChain* markov_chain, char* data_ptr)
 		{
 			return NULL;
 		}
-		if (strcmp(current_node->data->data, data_ptr) == 0)
+		if ((current_node->data->data, data_ptr) == 0)
 		{
 			return current_node;
 		}

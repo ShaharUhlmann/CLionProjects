@@ -177,30 +177,6 @@ markov_chain.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex3B_ushahar.dir/build.make CMakeFiles/ex3B_ushahar.dir/markov_chain.c.s
 .PHONY : markov_chain.c.s
 
-snakes_and_ladders.o: snakes_and_ladders.c.o
-.PHONY : snakes_and_ladders.o
-
-# target to build an object file
-snakes_and_ladders.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex3B_ushahar.dir/build.make CMakeFiles/ex3B_ushahar.dir/snakes_and_ladders.c.o
-.PHONY : snakes_and_ladders.c.o
-
-snakes_and_ladders.i: snakes_and_ladders.c.i
-.PHONY : snakes_and_ladders.i
-
-# target to preprocess a source file
-snakes_and_ladders.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex3B_ushahar.dir/build.make CMakeFiles/ex3B_ushahar.dir/snakes_and_ladders.c.i
-.PHONY : snakes_and_ladders.c.i
-
-snakes_and_ladders.s: snakes_and_ladders.c.s
-.PHONY : snakes_and_ladders.s
-
-# target to generate assembly for a file
-snakes_and_ladders.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex3B_ushahar.dir/build.make CMakeFiles/ex3B_ushahar.dir/snakes_and_ladders.c.s
-.PHONY : snakes_and_ladders.c.s
-
 tweets_generator.o: tweets_generator.c.o
 .PHONY : tweets_generator.o
 
@@ -240,9 +216,6 @@ help:
 	@echo "... markov_chain.o"
 	@echo "... markov_chain.i"
 	@echo "... markov_chain.s"
-	@echo "... snakes_and_ladders.o"
-	@echo "... snakes_and_ladders.i"
-	@echo "... snakes_and_ladders.s"
 	@echo "... tweets_generator.o"
 	@echo "... tweets_generator.i"
 	@echo "... tweets_generator.s"
