@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a42535cf-4e0b-4526-a9e4-f795ff0b4edb" name="https://github.com/ShaharUhlmann/C-Cpp_course.git" url="https://github.com/ShaharUhlmann/C-Cpp_course.git">
+        <fileTransfer accessType="LOCAL" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>

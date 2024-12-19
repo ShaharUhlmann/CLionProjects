@@ -1,0 +1,4 @@
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -S /home/ushahar/CLionProjects/ex3A_ushahar -B /home/ushahar/CLionProjects/ex3A_ushahar/cmake-build-debug
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ushahar/CLionProjects/ex3A_ushahar/cmake-build-debug
