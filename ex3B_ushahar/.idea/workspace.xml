@@ -31,7 +31,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5da34a2-4072-4d3a-87c2-f9cb5a61e029" name="Changes" comment="trying to add to git" />
+    <list default="true" id="f5da34a2-4072-4d3a-87c2-f9cb5a61e029" name="Changes" comment="check in markov_chain.c" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -499,7 +499,7 @@
       <workItem from="1734173215225" duration="13808000" />
       <workItem from="1734419415468" duration="4810000" />
       <workItem from="1734597157603" duration="351000" />
-      <workItem from="1734597522831" duration="977000" />
+      <workItem from="1734597522831" duration="1208000" />
     </task>
     <task id="LOCAL-00001" summary="trying to add to git">
       <option name="closed" value="true" />
@@ -509,7 +509,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734598343003</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="check in markov_chain.c">
+      <option name="closed" value="true" />
+      <created>1734598524686</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1734598524686</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -522,7 +530,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="trying to add to git" />
-    <option name="LAST_COMMIT_MESSAGE" value="trying to add to git" />
+    <MESSAGE value="check in markov_chain.c" />
+    <option name="LAST_COMMIT_MESSAGE" value="check in markov_chain.c" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
